@@ -32,13 +32,16 @@ resources = {
 
 # TODO 1: Print report of all coffee machine resources.
 
-#print(resources)
+
 
 # TODO 2. Get a logo, import it and print it.
 
 from art import logo
 print(logo)
-
 #TODO 3. Print a greeting.
 
-print("Welcome to the coffee kiosk!\n\nWhat would you like? (espresso/latte/cappuccino):" )
+print("Welcome to the coffee kiosk!\n\nWhat would you like? (espresso/latte/cappuccino):\n" )
+print(resources)
+print(f"Espresso price is: $",MENU["espresso"]["cost"], "\nLatte price is: $",MENU["latte"]["cost"], "\nCappuccino price is: $",MENU["cappuccino"]["cost"])
+#print(f"latte price is: $",MENU["latte"]["cost"])
+#print(f"cappuccino price is: $",MENU["cappuccino"]["cost"])
