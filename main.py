@@ -40,8 +40,17 @@ from art import logo
 print(logo)
 #TODO 3. Print a greeting.
 
-print("Welcome to the coffee kiosk!\n\nWhat would you like? (espresso/latte/cappuccino):\n" )
+def make_coffee(drink_dict):
+    for item, amount in drink_dict["ingredients"].items():
+        resources[item] -= amount
+    return resources
+
 print(resources)
-print(f"Espresso price is: $",MENU["espresso"]["cost"], "\nLatte price is: $",MENU["latte"]["cost"], "\nCappuccino price is: $",MENU["cappuccino"]["cost"])
-#print(f"latte price is: $",MENU["latte"]["cost"])
-#print(f"cappuccino price is: $",MENU["cappuccino"]["cost"])
+
+coffee_choice = input("Welcome to the coffee kiosk!\n\nWhat would you like? (espresso/latte/cappuccino):\n" )
+
+make_coffee(MENU[coffee_choice])
+
+print(resources)
+#print(f"Espresso price is: $",MENU["espresso"]["cost"], "\nLatte price is: $",MENU["latte"]["cost"], "\nCappuccino price is: $",MENU["cappuccino"]["cost"])
+
